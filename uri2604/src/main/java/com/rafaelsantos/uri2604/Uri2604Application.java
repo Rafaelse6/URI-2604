@@ -32,5 +32,14 @@ public class Uri2604Application implements CommandLineRunner {
 		for(ProductMinDTO obj : sqlResult) {
 			System.out.println(obj);
 		}
+		
+		System.out.println("\n\n");
+
+		System.out.println("---JPQL RESULT---");
+		
+		List<ProductMinDTO> jpqlResult = repository.jpqlSearch(560.0);
+		for (ProductMinDTO obj: jpqlResult) {
+			System.out.println(obj);
+		}
 	}
 }
